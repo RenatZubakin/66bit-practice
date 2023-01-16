@@ -1,0 +1,120 @@
+.page_container{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.news_container{
+  width:90%;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  border-radius:10px;
+  border:3px solid var(--secondColor);
+  background-color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+
+.news_head{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content:flex-start ;
+  border-bottom: 2px solid var(--textColor);
+
+  .icon{
+    color: var(--textColor);
+    font-size: 45px;
+    margin-right: 5px;
+  }
+
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h4,p{
+    margin: 0;
+    color:var(--textColor);
+    text-align: left;
+  }
+
+}
+
+.news_body{
+  margin-top: 15px;
+  background-color: var(--secondColor);
+  padding: 5px;
+
+  p{
+    text-align: left;
+    margin: 0;
+    color:var(--textColor)
+  }
+}
+
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+.refresh_container{
+  position: absolute;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  height: 0;
+  .refresh_icon{
+    color: var(--textColor);
+    font-size: 0;
+  }
+}
+
+.refresh_active{
+  padding: 5px;
+  position: absolute;
+  border:1px solid var(--textColor);
+  height: 50px;
+  transition: 1.5s;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background-color: var(--main-color);
+  border-radius: 50%;
+
+  .refresh_icon{
+    color: var(--textColor);
+    transition: 1.5s;
+    font-size: 45px;
+    animation: spin 2000ms linear infinite;
+  }
+}
+
+.refresh_button{
+  display: none;
+}
+.refresh_button_active{
+  position: fixed;
+  margin-top: 10px;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--textColor);
+  border-radius: 20px;
+  padding: 10px;
+
+  p{
+    color:var(--textColor);
+    margin:0;
+  }
+}
+
+
+
+

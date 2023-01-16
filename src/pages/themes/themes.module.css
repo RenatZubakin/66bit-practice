@@ -1,0 +1,42 @@
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  margin-top: 25vh;
+}
+
+.button_container {
+  width: 50%;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.button_container:nth-child(1) {
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(206, 240, 227);
+  color: rgb(10, 10, 10);
+}
+
+.button_container:nth-child(2) {
+  background-color: rgb(111, 103, 120);
+  border-color: rgb(25, 25, 25);
+  color: rgb(209, 187, 46);
+}
+
+.button_container:nth-child(3) {
+  background-color: rgb(41, 67, 153);
+  border-color: rgb(34, 22, 105);
+  color: rgb(201, 201, 201);
+}
+
+.button_container:hover {
+  transform: scale(1.03);
+  opacity: 0.8;
+}
+
+/*# sourceMappingURL=themes.module.css.map */

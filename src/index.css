@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+html,body{
+  height: 100%;
+  background-color: var(--secondColor);
+  transition: background-color 200ms linear;
+}
+
+App{
+  min-height: 100%;
+  transition: background-color 200ms linear;
+}
+
+html[data-theme='light']{
+  --main-color:rgb(206, 240, 227);
+  --secondColor:rgb(255, 255, 255);
+  --textColor:rgb(10, 10, 10);
+}
+
+html[data-theme='dark']{
+  --main-color:rgb(25, 25, 25);
+  --secondColor:rgb(111, 103, 120);
+  --textColor:rgb(209, 187, 46);
+}
+html[data-theme='blue']{
+  --main-color:rgb(34, 22, 105);
+  --secondColor:rgb(41, 67, 153);
+  --textColor:rgb(201, 201, 201);
+}

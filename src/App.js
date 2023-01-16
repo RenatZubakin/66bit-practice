@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Themes from "./pages/themes/Themes";
+import News from "./pages/news/News";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import {useTheme} from "./hooks/useTheme";
+import Layout from "./components/Layout";
+import {useEffect, useState} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App({navigation}) {
+    const {theme, setTheme} = useTheme()
+    return (
+        <div className="App">
+            <Routes>
+                <Route path={'/'} element={<Layout />}>
+                    <Route index element={<News/>}/>
+                    <Route path={'themes'} element={<Themes/>}/>
+                </Route>
+            </Routes>
+
+        </div>
+    );
 }
 
 export default App;
